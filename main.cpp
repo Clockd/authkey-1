@@ -13,10 +13,11 @@ int main()
     g.clear();
 
     for (int x = 0; x < 6; x++) {
-        //cout << char((a[x] % 42) +  48) << endl;
-        g[x] += char(rand() % 26) +  65);
+        //cout << char((a[x] % 25) +  97) << endl;
+        g[x] += char(rand() % 25 +  65);
     }
-    
+    g[7]= '\0';
+    cout << g;
     cin >> u;
     if (g == u) {
         cout << "Correct guess!";
